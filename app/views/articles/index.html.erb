@@ -2,5 +2,6 @@
     <h2><%= article.title %></h2>
     <p><%= article.text %></p>
     <p><%= link_to 'Commetns', article_path(article) %></p>
+    <p><%= link_to 'Edit', edit_article_path(article) %></p>
     <hr>
 <% end %>
