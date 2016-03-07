@@ -1,5 +1,14 @@
-<h1><%= @article.title %></h1>
-<p><%= @article.text %></p>
+<div class="post">
+  <h1><%= @article.title %></h1>
+  <p><%= @article.text %></p>
+</div>
+<% @comments.each do |comment| %>
+    <div class="comment">
+      <p><%= comment.body %></p>
+      <p>Commented <%= comment.author %> at <%= comment.created_at %></p>
+    </div>
+<% end %>
+<br/>
 
 <%= form_for ([@article, @article.comments.build]) do |f| %>
     <p>
