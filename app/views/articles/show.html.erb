@@ -8,7 +8,7 @@
 <% @comments.each do |comment| %>
     <div class="comment">
       <p><%= comment.body %></p>
-      <p id="commented">Commented <%= comment.author %> at <%= comment.created_at %></p>
+      <p id="small">Commented <%= comment.author %> at <%= comment.created_at %></p>
     </div>
     <hr/>
 <% end %>

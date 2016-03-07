@@ -24,6 +24,7 @@
 
 body {
 	background-color: #eee;
+	font-family: Georgia;
 }
 
 .container {
@@ -44,7 +45,10 @@ body {
 	font-size: 115%;
 }
 
-#commented {
+#small {
 	font-size: 70%;
 	color: #666;
+	a {
+		color: #666;
+	}
 }
