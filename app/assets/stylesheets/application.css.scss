@@ -21,3 +21,30 @@
 .field_with_errors textarea {
 	border: 2px solid red;
 }
+
+body {
+	background-color: #eee;
+}
+
+.container {
+	padding-left: 50px;
+}
+
+.post {
+	background-color: #f7ecb5;
+	margin: 30px;
+	padding: 10px;
+	border: 2px solid #fdb;
+	border-radius: 10px 0;
+}
+
+.comment {
+	margin-right: 30px;
+	padding: 1px 15px;
+	font-size: 115%;
+}
+
+#commented {
+	font-size: 70%;
+	color: #666;
+}

@@ -2,14 +2,19 @@
   <h1><%= @article.title %></h1>
   <p><%= @article.text %></p>
 </div>
+
+<br>
+<h2>Comments:</h2>
 <% @comments.each do |comment| %>
     <div class="comment">
       <p><%= comment.body %></p>
-      <p>Commented <%= comment.author %> at <%= comment.created_at %></p>
+      <p id="commented">Commented <%= comment.author %> at <%= comment.created_at %></p>
     </div>
+    <hr/>
 <% end %>
 <br/>
 
+<h2>Write a comment:</h2>
 <%= form_for ([@article, @article.comments.build]) do |f| %>
     <p>
       <%= f.label :author %><br/>
