@@ -5,7 +5,7 @@
 
 <br>
 <h2>Comments:</h2>
-<% @comments.each do |comment| %>
+<% @article.comments.each do |comment| %>
     <div class="comment">
       <p><%= comment.body %></p>
       <p id="small">Commented <%= comment.author %> at <%= comment.created_at %></p>
