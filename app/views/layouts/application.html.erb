@@ -18,14 +18,16 @@
     <li><a href="/about">About</a></li>
     <li>
       <% if user_signed_in? %>
-        <%= link_to 'Sign Out', destroy_user_session_path, :method => :delete %>
+          <%= link_to 'Sign Out', destroy_user_session_path, :method => :delete %>
       <% else %>
         <%= link_to 'Sign In', new_user_session_path %>
       <% end %>
     </li>
   </ul>
 </div>
-<p style="margin-left: 10%"><u><%= current_user.email %></u></p>
+<% if user_signed_in? %>
+  <p style="margin-left: 10%"><u><%= current_user.email %></u></p>
+<% end %>
 
 <p class="notice"><%= notice %></p>
 <p class="alert"><%= alert %></p>
