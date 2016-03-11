@@ -2,14 +2,15 @@
 <html>
 <head>
   <title>Blog</title>
+  <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
 </head>
 <body>
 
-<div>
-  <ul>
+<div class="navbar-collapse collapse">
+  <ul class="nav navbar-nav">
     <li><a href="/articles">Articles</a></li>
     <li><a href="/articles/new">New Articles</a></li>
     <li><a href="/contacts">Contacts</a> </li>
