@@ -5,7 +5,7 @@
       <p>Writer is <%= article.username %></p>
       <%= link_to 'Commetns', article_path(article) %> |
       <%= link_to 'Edit', edit_article_path(article) %> |
-      <%= link_to 'Delete', article_path(article), method: :delete, data: {confirm: 'Are you sure?'} %> |
+      <%= link_to 'Delete', article_path(article), method: :delete, data: {confirm: 'Are you sure?'} %>
     </div>
     <hr>
 <% end %>
