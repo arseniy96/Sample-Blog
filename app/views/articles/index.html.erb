@@ -1,10 +1,11 @@
 <% @articles.each do |article| %>
     <h2><%= article.title %></h2>
     <p><%= article.text %></p>
-    <p id="small">
+    <div id="small">
+      <p>Writer is <%= article.username %></p>
       <%= link_to 'Commetns', article_path(article) %> |
       <%= link_to 'Edit', edit_article_path(article) %> |
       <%= link_to 'Delete', article_path(article), method: :delete, data: {confirm: 'Are you sure?'} %> |
-    </p>
+    </div>
     <hr>
 <% end %>
