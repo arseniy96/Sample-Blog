@@ -33,7 +33,7 @@ body {
 
 .post {
 	background-color: #f7ecb5;
-	margin: 30px;
+	margin: 10px;
 	padding: 10px;
 	border: 2px solid #fdb;
 	border-radius: 10px 0;
@@ -46,9 +46,14 @@ body {
 }
 
 #small {
-	font-size: 70%;
+	font-size: 85%;
 	color: #666;
 	a {
 		color: #666;
 	}
+}
+
+.navbar-collapse {
+	margin-left: 10%;
+	font-size: 150%;
 }
