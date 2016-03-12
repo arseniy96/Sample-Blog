@@ -3,9 +3,11 @@
     <p><%= article.text %></p>
     <div id="small">
       <p>Writer is <%= article.username %></p>
-      <%= link_to 'Commetns', article_path(article) %> |
-      <%= link_to 'Edit', edit_article_path(article) %> |
-      <%= link_to 'Delete', article_path(article), method: :delete, data: {confirm: 'Are you sure?'} %>
+      <%= link_to 'Commetns', article_path(article) %>
+      <% if article.username == current_user.email %>
+          | <%= link_to 'Edit', edit_article_path(article) %>
+          | <%= link_to 'Delete', article_path(article), method: :delete, data: {confirm: 'Are you sure?'} %>
+      <% end %>
     </div>
     <hr>
 <% end %>
