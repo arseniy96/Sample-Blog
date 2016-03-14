@@ -1,6 +1,6 @@
 class ArticlesController < ApplicationController
 
-  before_filter :authenticate_user!
+  before_filter :authenticate_user!, :only => [:new, :create]
 
   def index
     @articles = Article.all
@@ -15,7 +15,6 @@ class ArticlesController < ApplicationController
 
   def create
     @article = Article.new(article_params)
-    @article.username = current_user.email
     if @article.save
       redirect_to @article
     else
