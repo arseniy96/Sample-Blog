@@ -10,32 +10,39 @@
 </head>
 <body>
 
-<div class="navbar-collapse collapse">
-  <ul class="nav navbar-nav">
-    <li><a href="/articles">Articles</a></li>
-    <li><a href="/articles/new">New Articles</a></li>
-    <li><a href="/contacts">Contacts</a> </li>
-    <li><a href="/terms">Terms</a></li>
-    <li><a href="/about">About</a></li>
-    <li>
-      <% if user_signed_in? %>
-          <%= link_to 'Sign Out', destroy_user_session_path, :method => :delete %>
-      <% else %>
-        <%= link_to 'Sign In', new_user_session_path %>
-      <% end %>
-    </li>
-  </ul>
-</div>
-<% if user_signed_in? %>
-  <p style="margin-left: 10%"><u><%= current_user.username %></u></p>
-<% end %>
-
-<p class="notice"><%= notice %></p>
-<p class="alert"><%= alert %></p>
-
 <div class="container">
-  <%= yield %>
-</div>
+  <div class="row">
+    <div class="col-xs-12">
+      <div class="navbar-collapse collapse">
+        <ul class="nav navbar-nav">
+          <li><a href="/articles">Articles</a></li>
+          <li><a href="/articles/new">New Articles</a></li>
+          <li><a href="/contacts">Contacts</a> </li>
+          <li><a href="/terms">Terms</a></li>
+          <li><a href="/about">About</a></li>
+          <li>
+            <% if user_signed_in? %>
+                <%= link_to 'Sign Out', destroy_user_session_path, :method => :delete %>
+            <% else %>
+              <%= link_to 'Sign In', new_user_session_path %>
+            <% end %>
+          </li>
+        </ul>
+      </div>
+      <% if user_signed_in? %>
+        <p><u><%= current_user.username %></u></p>
+      <% end %>
+    </div> <!--/.col-->
+  </div>  <!--/.row-->
+
+    <p class="notice"><%= notice %></p>
+    <p class="alert"><%= alert %></p>
+  <div class="row">
+    <div class="container">
+      <%= yield %>
+    </div>
+  </div>
+</div> <!--/.container-->
 
 </body>
 </html>
