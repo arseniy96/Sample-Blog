@@ -12,9 +12,10 @@
 
 <div class="container">
   <div class="row">
-    <div class="col-xs-12">
-      <div class="navbar-collapse collapse">
+    <div class="col-xs-12 hidden-xs">
+      <nav class="navbar-collapse collapse">
         <ul class="nav navbar-nav">
+          <li><a href="/">Home</a></li>
           <li><a href="/articles">Articles</a></li>
           <li><a href="/articles/new">New Articles</a></li>
           <li><a href="/contacts">Contacts</a> </li>
@@ -28,20 +29,20 @@
             <% end %>
           </li>
         </ul>
-      </div>
+      </nav>
       <% if user_signed_in? %>
         <p><u><%= current_user.username %></u></p>
       <% end %>
     </div> <!--/.col-->
   </div>  <!--/.row-->
-
     <p class="notice"><%= notice %></p>
     <p class="alert"><%= alert %></p>
   <div class="row">
-    <div class="col-xs-2"></div>
-    <div class="col-xs-10">
+    <div class="col-md-1 col-lg-1"></div>
+    <div class="col-md-10 col-lg-10">
       <%= yield %>
     </div>
+    <div class="col-md-1 col-lg-1"></div>
   </div>
 </div> <!--/.container-->
 
