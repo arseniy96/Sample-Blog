@@ -7,6 +7,7 @@
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
+  <script src="//netdna.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
 </head>
 <body>
 
@@ -33,6 +34,35 @@
       <% if user_signed_in? %>
         <p><u><%= current_user.username %></u></p>
       <% end %>
+    </div> <!--/.col-->
+    <div class="col-xs-12 visible-xs">
+      <div class="bs-example">
+        <ul class="nav nav-pills">
+          <li style="padding-top:8px;">
+            <div style="float: right;" class="dropdown">
+              <button class="btn btn-lg btn-primary dropdown-toggle" type="button" data-toggle="dropdown">Menu</button>
+              <ul class="dropdown-menu">
+                <li><a href="/articles">Articles</a></li>
+                <li><a href="/articles/new">New Articles</a></li>
+                <li><a href="/contacts">Contacts</a> </li>
+                <li><a href="/terms">Terms</a></li>
+                <li><a href="/about">About</a></li>
+                <li>
+                  <% if user_signed_in? %>
+                      <%= link_to 'Sign Out', destroy_user_session_path, :method => :delete %>
+                  <% else %>
+                      <%= link_to 'Sign In', new_user_session_path %>
+                  <% end %>
+                </li>
+              </ul>
+            </div>
+          </li>
+          <li style="padding-top:7px; font-size: 160%"><a href="/">Home</a></li>
+          <% if user_signed_in? %>
+              <p><u><%= current_user.username %></u></p>
+          <% end %>
+        </ul>
+      </div>
     </div> <!--/.col-->
   </div>  <!--/.row-->
     <p class="notice"><%= notice %></p>
