@@ -15,13 +15,15 @@
 <% end %>
 <br/>
 
-<h2>Write a comment:</h2>
-<%= form_for ([@article, @article.comments.build]) do |f| %>
-    <p>
-      <%= f.label :body %><br/>
-      <%= f.text_area :body %>
-    </p>
-    <p>
-      <%= f.submit %>
-    </p>
+<% if user_signed_in? %>
+    <h2>Write a comment:</h2>
+    <%= form_for ([@article, @article.comments.build]) do |f| %>
+        <p>
+          <%= f.label :body %><br/>
+          <%= f.text_area :body %>
+        </p>
+        <p>
+          <%= f.submit %>
+        </p>
+    <% end %>
 <% end %>
