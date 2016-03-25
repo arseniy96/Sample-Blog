@@ -6,7 +6,7 @@ describe Article do
     it { should validate_presence_of :text }
   end
 
-  describe "validations for length" do
+  describe "validation to length" do
     it { should validate_length_of(:title).is_at_most(140) }
     it { should validate_length_of(:text).is_at_most(4000) }
   end
@@ -34,5 +34,9 @@ end
 describe Comment do
   describe "validations" do
     it { should validate_presence_of :body }
+  end
+
+  describe "validation to length" do
+    it { should validate_length_of(:body).is_at_most(4000) }
   end
 end
