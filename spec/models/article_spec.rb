@@ -30,3 +30,9 @@ describe Article do
     end
   end
 end
+
+describe Comment do
+  describe "validations" do
+    it { should validate_presence_of :body }
+  end
+end
