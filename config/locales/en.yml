@@ -21,3 +21,6 @@
 
 en:
   hello: "Hello world"
+
+  contacts:
+    new_contacts: "New contacts"
