@@ -1,4 +1,4 @@
-require 'spec_helper'
+require 'rails_helper'
 
 feature "Account Creation" do
   scenario "allows guest to create account" do
