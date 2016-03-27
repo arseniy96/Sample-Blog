@@ -8,3 +8,12 @@ def sign_up
 
   click_button 'Sign up'
 end
+
+def new_article
+  visit new_article_path
+
+  fill_in :article_title, :with => 'Lorem Ipsum'
+  fill_in :article_text, :with => 'Lorem ipsum dolor sit amet'
+
+  click_button 'Save Article'
+end
