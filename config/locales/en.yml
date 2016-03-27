@@ -24,3 +24,7 @@ en:
 
   contacts:
     new_contacts: "New contacts"
+    send_contact: "Thanks!"
+
+  articles:
+    new_article: "New article"
